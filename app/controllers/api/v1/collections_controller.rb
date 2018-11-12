@@ -2,12 +2,12 @@ class Api::V1::CollectionsController < ApplicationController
   before_action :set_collection, only: [:show, :update, :destroy]
 
   def index
-    collections = Comment.all
+    collections = Collection.all
     render json: collections, status: 200
   end
 
   def create
-    collection = Comment.create(collection_params)
+    collection = Collection.create(collection_params)
     render json: collection, status: 201
   end
 
@@ -28,7 +28,7 @@ class Api::V1::CollectionsController < ApplicationController
 
   private
   def collection_params
-    params.permit(:designer, :season)
+    params.permit(:designer, :season, :brand)
   end
 
   def set_collection

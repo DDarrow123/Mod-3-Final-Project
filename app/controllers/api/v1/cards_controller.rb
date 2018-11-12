@@ -19,7 +19,7 @@ class Api::V1::CardsController < ApplicationController
   def destroy
     cardId = @card.id
     @card.destroy
-    render json: {message:"Zap! Comment deleted", cardId:cardId}
+    render json: {message:"Zap! Card deleted", cardId:cardId}
   end
 
   def show
