@@ -3,7 +3,9 @@ class Api::V1::CardsController < ApplicationController
 
   def index
     cards = Card.all
-    render json: cards, status: 200
+    render json: Card.includes(:comments), include: ['comments'], status: 200
+
+
   end
 
   def create
@@ -23,7 +25,9 @@ class Api::V1::CardsController < ApplicationController
   end
 
   def show
-    render json: @card, status: 200
+    render :json => @card.to_json( :include => [:comments] )
+
+    # render json: @card.includes(:comments), include: ['comments'], status: 200
   end
 
   private
