@@ -26,6 +26,11 @@ class Api::V1::UsersController < ApplicationController
     render json: @user, status: 200
   end
 
+  def sign_in
+    @user = User.find_by(username: params[:username])
+    render json: @user, status: 200
+  end
+
   private
   def user_params
     params.permit(:name, :username)

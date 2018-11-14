@@ -3,7 +3,11 @@ class Api::V1::CollectionsController < ApplicationController
 
   def index
     collections = Collection.all
-    render json: collections, status: 200
+    # render json: collections, status: 200
+    # render json: Collection.includes({:cards {include: :comments}) include: ['cards', 'comments'], status: 200
+
+    Collection.includes(:cards {include: :comments}), status: 200
+
   end
 
   def create
@@ -23,7 +27,10 @@ class Api::V1::CollectionsController < ApplicationController
   end
 
   def show
-    render json: @collection, status: 200
+    # render json: @collection, status: 200
+    render :json => @collection.to_json( :include => [:cards] )
+
+    # (:include => { :bs => {:include =>:c} })
   end
 
   private

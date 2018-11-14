@@ -4,8 +4,6 @@ class Api::V1::CardsController < ApplicationController
   def index
     cards = Card.all
     render json: Card.includes(:comments), include: ['comments'], status: 200
-
-
   end
 
   def create
