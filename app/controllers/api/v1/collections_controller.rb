@@ -5,8 +5,10 @@ class Api::V1::CollectionsController < ApplicationController
     collections = Collection.all
     # render json: collections, status: 200
     # render json: Collection.includes({:cards {include: :comments}) include: ['cards', 'comments'], status: 200
+    # render json: Collection.includes({:cards {include: :comments}}), include: ['cards', 'comments'], status: 200
 
-    Collection.includes(:cards {include: :comments}), status: 200
+    render json: Collection.includes(cards: [:comments]), include: {'cards' => {:include => 'comments'
+      }}, status: 200
 
   end
 
@@ -28,7 +30,8 @@ class Api::V1::CollectionsController < ApplicationController
 
   def show
     # render json: @collection, status: 200
-    render :json => @collection.to_json( :include => [:cards] )
+    render :json => @collection.to_json( include: {'cards' => {:include => 'comments'
+      }} )
 
     # (:include => { :bs => {:include =>:c} })
   end
