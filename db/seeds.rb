@@ -55,8 +55,8 @@ Card.create(image: 'http://localhost:3000/Dries_5.jpg', likes: 0, details: 'No w
 
 Collection.create(designer: 'Pier Paolo Piccioli', season: 'Spring 2019', brand: 'Valentino')
 Collection.create(designer: 'Kate and Laura Mulleavy', season: 'Spring 2019', brand: 'Rodarte')
-Collection.create(designer: 'Dries Van Noten', season: 'Spring 2019', brand: 'Dries Van Noten')
 Collection.create(designer: 'Sarah Burton', season: 'Spring 2019', brand: 'Alexander McQueen')
+Collection.create(designer: 'Dries Van Noten', season: 'Spring 2019', brand: 'Dries Van Noten')
 
 
 User.create(name: 'Devon Darrow', username: 'DDarrow')
