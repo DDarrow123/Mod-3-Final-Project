@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
 # COLLECTION ONE
 Card.create(image: 'http://localhost:3000/Valentino_1.jpg', likes: 0, details: '“I was thinking of paradises, about artists’ colonies of the past,” said designer Pierpaolo Piccioli.', collection_id: 1)
 
@@ -40,8 +42,6 @@ Card.create(image: 'http://localhost:3000/McQueen_4.jpg', likes: 0, details: 'Ta
 Card.create(image: 'http://localhost:3000/McQueen_5.jpg', likes: 0, details: 'In some of the best pieces, the traces of the original vintage garments were retained, embedded in a black jet-beaded jacket with a canvas back with a bustle, or the boning of a crinoline holding the structure of the puffed sleeves of a cotton voile dress.', collection_id: 3)
 
 
-
-
 # COLLECTION 4
 Card.create(image: 'http://localhost:3000/Dries_1.jpg', likes: 0, details: 'It was about someone who likes to play with her clothes, “a gesture of couture, but not in a retro way—the way she stands, holds her bag, all these things,” he said.', collection_id: 4)
 
@@ -52,6 +52,8 @@ Card.create(image: 'http://localhost:3000/Dries_3.jpg', likes: 0, details: 'In V
 Card.create(image: 'http://localhost:3000/Dries_4.jpg', likes: 0, details: 'Fun pairs of pumps in diagonal stripes—yep, they appealed to all those ladies who have gone with the novelty of the white shoe and boot this past year. It was a super-clever step forward.', collection_id: 4)
 
 Card.create(image: 'http://localhost:3000/Dries_5.jpg', likes: 0, details: 'No wonder Van Noten’s well-wishers were wreathed in smiles backstage. It was his best collection in quite a while. And grateful smiles of self-recognition among grown-ups runway-side are a rare thing these days.', collection_id: 4)
+
+
 
 Collection.create(designer: 'Pier Paolo Piccioli', season: 'Spring 2019', brand: 'Valentino')
 Collection.create(designer: 'Kate and Laura Mulleavy', season: 'Spring 2019', brand: 'Rodarte')
@@ -65,6 +67,7 @@ User.create(name: 'Jan Mlcoch', username: 'JMlcoch')
 User.create(name: 'Nicole Bugge', username: 'NBugge')
 User.create(name: 'Molly Jimenez', username: 'MDJimenez')
 User.create(name: 'Meagan Markle', username: 'MMarkle')
+
 
 Comment.create(content: 'This is lovely. The details are unreal!', user_id: 1, card_id: 1)
 Comment.create(content: 'This is such a beautiful look', user_id: 2, card_id: 2)
