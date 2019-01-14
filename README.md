@@ -1,25 +1,14 @@
-# README
+# Mod-3-Final-Project-Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Fashion Week Reviews
 
-Things you may want to cover:
+Backend:
 
-* Ruby version
+Download this repo to your local computer selecting the appropriate folder that you wish to test the app in
 
-* System dependencies
+`Cd` into the 'fashion_week' folder in your terminal to access the backend of the application
 
-* Configuration
+Run `bundle install` and `rails s` which should display the JSON data based on the proper address once loaded, i.e.) http://localhost:3000/api/v1/users, http://localhost:3000/api/v1/cards, http://localhost:3000/api/v1/collections or http://localhost:3000/api/v1/comments 
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Mod-3-Final-Project
+Have Fun!
