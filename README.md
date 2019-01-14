@@ -2,6 +2,7 @@
 
 ## Fashion Week Reviews
 
+## Setup Instructions
 Backend:
 
 Download this repo to your local computer selecting the appropriate folder that you wish to test the app in
